@@ -33,7 +33,7 @@ DevOps practices include the following:
 - Continuous Deployment (CD) using ArgoCD (GitOps)
 
 ## Summary Diagram
-![image](https://github.com/user-attachments/assets/45f4ef12-c5b5-4247-9d43-356b5dfb671b)
+![image]()
 
 
 # Dockerfile (Multi-stage build)
