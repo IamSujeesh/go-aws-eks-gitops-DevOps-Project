@@ -163,7 +163,7 @@ This shows the resources Terraform will create.
 terraform apply
 ```
 
-![Terraform](images/Terraform-apply.png)
+![Terraform](images/Terraform-apply-result.png)
 
 Terraform will provision:
 
@@ -428,6 +428,8 @@ http://go-web-app.79.125.63.3.nip.io/about
 ```
 
 The request will route through the Ingress Controller to your service and pods.
+
+![App](images/App-access-from-ing.png)
 
 # Helm chart conversion for application deployment
 
