@@ -27,7 +27,7 @@ The Dockerfile is used to build a Docker image. The Docker image contains the Go
 
 We will use a Multi-stage build to create the Docker image. The Multi-stage build is a feature of Docker that allows you to use multiple build stages in a single Dockerfile. This will reduce the size of the final Docker image and also secure the image by removing unnecessary files and packages.
 
-# Containerization with docker
+# Containerization with Docker
 
 Containerization is the process of packaging an application and its dependencies into a container. The container is then run on a container platform such as Docker. Containerization allows you to run the application in a consistent environment, regardless of the underlying infrastructure.
 
@@ -725,7 +725,7 @@ You can monitor pipeline execution in the GitHub Actions tab.
 
 ## CD Implementation (Argo CD)
 
-every time ci pipeline runs ,ArgoCD has to identify the change and push it to k8s cluster
+Every time ci pipeline runs ,Argo CD has to identif the change and push it to k8s cluster
 
 # Install Argo CD
 
@@ -736,16 +736,9 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-## Access the Argo CD UI (Loadbalancer service) 
+## Access the Argo CD UI (LoadBalancer service) 
 
 After the CI pipeline publishes the new image tag and updates the Helm chart, Argo CD detects the change and deploys the latest version to the EKS cluster.
-
-Install Argo CD
-
-```bash
-kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-```
 
 Expose Argo CD UI via LoadBalancer
 
@@ -777,7 +770,7 @@ Retrieve Argo CD Admin Password
 kubectl get secrets -n argocd
 kubectl edit secret argocd-initial-admin-secret -n argocd
 ``` 
-- copy the base64 encodes password from the opened file
+- copy the base64 encoded password from the opened file
 - Retrieve Argo CD Admin Password
 
 ```bash
