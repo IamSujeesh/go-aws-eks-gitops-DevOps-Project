@@ -510,11 +510,6 @@ NAME                                   DESIRED   CURRENT   READY   AGE
 replicaset.apps/go-web-app-c876cff96   1         1         1       91s
 ```
 
-Uninstall release if needed:
-
-```bash
-helm uninstall go-webapp go-web-app-chart
-```
 
 ## Summary (What This Workflow Demonstrates)
 
@@ -829,6 +824,19 @@ EAD+sk508@IN-5CD4377RNY MINGW64 ~/Downloads/go-eks-gitops-devops-project (main)
 $
 ```
 
+## 🧹 Cleanup
+
+To avoid unnecessary AWS costs, clean up resources after testing:
+
+### Delete Kubernetes Resources
+```bash
+helm uninstall go-web-app
+kubectl delete namespace argocd
+```
+## Destroy AWS Infrastructure
+```bash
+terraform destroy
+```
 
 ## 📌 Key Learnings
 
