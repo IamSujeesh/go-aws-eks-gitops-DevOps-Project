@@ -21,13 +21,13 @@ The application is containerized using Docker, deployed on AWS EKS using Kuberne
 ![Architecture Diagram](images/Architecture-Diagram.png)
 
 
-# Dockerfile (Multi-stage build)
+## Dockerfile (Multi-stage build)
 
 The Dockerfile is used to build a Docker image. The Docker image contains the Go web application and its dependencies. The Docker image is then used to create a Docker container.
 
 We will use a Multi-stage build to create the Docker image. The Multi-stage build is a feature of Docker that allows you to use multiple build stages in a single Dockerfile. This will reduce the size of the final Docker image and also secure the image by removing unnecessary files and packages.
 
-# Containerization with Docker
+## Containerization with Docker
 
 Containerization is the process of packaging an application and its dependencies into a container. The container is then run on a container platform such as Docker. Containerization allows you to run the application in a consistent environment, regardless of the underlying infrastructure.
 
@@ -196,9 +196,9 @@ If you see worker nodes listed — kubectl is successfully configured.
 
 Once the EKS cluster is created and kubectl access is configured, Deploying the Application to EKS (Manual Deployment Before CI/CD)
 
-# Kubernetes Deployment (Service, Ingress, NGINX Ingress Controller)
+## Kubernetes Deployment (Service, Ingress, NGINX Ingress Controller)
 
-## Deploy Kubernetes Manifests
+Deploy Kubernetes Manifests
 
 ```bash
 kubectl apply -f k8s/manifests/deployment.yaml
@@ -404,11 +404,9 @@ The request will route through the Ingress Controller to your service and pods.
 
 ![App](images/App-access-from-ing.png)
 
-# Helm chart conversion for application deployment
+## Helm chart conversion for application deployment
 
 - Helm is used to templatize and parameterize the Kubernetes manifests.
-
-## Create Helm Chart
 
 - Install Helm
 
@@ -529,7 +527,7 @@ helm uninstall go webapp go-web-app-chart
 - Converting manifests to a Helm chart
 
 
-# Continuous Integration (CI) using GitHub Actions
+## Continuous Integration (CI) using GitHub Actions
 
 Continuous Integration (CI) is the practice of automatically building, testing, and validating application changes whenever code is pushed to a shared repository. CI helps detect issues early and ensures every commit remains in a deployable state.
 
@@ -543,7 +541,7 @@ CI Pipeline Tasks
 - Build a Docker image and push it to Docker Hub
 - Automatically update the Helm chart with the new image tag whenever a commit is made
 
-# Continuous Deployment (CD) using ArgoCD (GitOps)
+## Continuous Deployment (CD) using ArgoCD (GitOps)
 
 Continuous Deployment (CD) is the practice of automatically deploying application changes to the target environment once they pass CI validation. CD reduces deployment delays and enables faster delivery of new features and fixes.
 
@@ -727,7 +725,7 @@ You can monitor pipeline execution in the GitHub Actions tab.
 
 Every time ci pipeline runs ,Argo CD has to identif the change and push it to k8s cluster
 
-# Install Argo CD
+- Install Argo CD
 
 Install Argo CD using manifests
 
