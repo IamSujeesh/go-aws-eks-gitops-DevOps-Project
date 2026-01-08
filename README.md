@@ -18,7 +18,7 @@ The application is containerized using Docker, deployed on AWS EKS using Kuberne
 
 ## 🏗 Architecture
 
-![Architecture Diagram](images/Architecture-Diagram.png)
+![Architecture Diagram](images/Architecture_Diagram.png)
 
 
 ## Dockerfile (Multi-stage build)
