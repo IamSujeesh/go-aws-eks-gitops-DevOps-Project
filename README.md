@@ -1,4 +1,4 @@
-## 🚀 Project Overview
+# 🚀 Project Overview
 
 This project demonstrates a complete end-to-end DevOps workflow for a Golang web application using modern cloud-native tools.
 
