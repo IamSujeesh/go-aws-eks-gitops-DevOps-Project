@@ -117,7 +117,7 @@ on windows_amd64
 Clone the Repository
 
 ```bash
-git clone https://github.com/iamsujeesh/go-web-app.git
+git clone https://github.com/iamsujeesh/go-aws-eks-gitops-DevOps-Project.git
 ```
 
 ```bash
@@ -406,7 +406,7 @@ The request will route through the Ingress Controller to your service and pods.
 
 ## Helm chart conversion for application deployment
 
-- Helm is used to templatize and parameterize the Kubernetes manifests.
+ Helm is used to templatize and parameterize the Kubernetes manifests.
 
 - Install Helm
 
