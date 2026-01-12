@@ -117,7 +117,7 @@ on windows_amd64
 Clone the Repository
 
 ```bash
-git clone https://github.com/iamsujeesh/go-aws-eks-gitops-DevOps-Project.git
+git clone https://github.com/IamSujeesh/go-eks-gitops-platform.git
 ```
 
 ```bash
